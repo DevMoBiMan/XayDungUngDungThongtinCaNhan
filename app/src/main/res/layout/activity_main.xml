@@ -20,10 +20,18 @@
         android:textStyle="bold" />
 
     <ImageView
-        android:id="@+id/imgChanDung"
-        android:layout_width="match_parent"
+        android:id="@+id/imageViewProfile"
+        android:layout_gravity="center"
+        android:layout_width="100dp"
         android:layout_height="100dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:background="@drawable/ic_launcher_background"
+        android:contentDescription="Hình đại diện"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
@@ -81,44 +89,37 @@
         android:textSize="20sp" />
 
     <RadioGroup
-        android:id="@+id/rdGioiTinh"
+        android:id="@+id/rdGioTinh"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/etxtSDT"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp">
 
             <RadioButton
                 android:id="@+id/rdNam"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:checked="false"
-                android:text="Nam"
-                android:textSize="20sp" />
+                android:text="Nam" />
 
             <RadioButton
                 android:id="@+id/rdNu"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:checked="false"
                 android:text="Nữ"
-                android:textSize="20sp" />
+                android:layout_marginStart="16dp" />
 
             <RadioButton
                 android:id="@+id/rdKhac"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:checked="false"
+                android:layout_height="wrap_content"
                 android:text="Khác"
-                android:textSize="20sp" />
-        </LinearLayout>
+                android:layout_marginStart="16dp" />
     </RadioGroup>
 
     <CheckBox
